@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:paddingBottom="7dp">
+
+
+    <TextView
+        android:textSize="25sp"
+        android:text="Unicauca Estereo"
+        android:id="@+id/txt_nombre_programa_P"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff9e2018"
+        android:layout_marginLeft="3dp"/>
+
+    <View
+        android:id="@+id/dividerHor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ff9e2018"/>
+
+    <LinearLayout
+        android:layout_marginLeft="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textSize="20sp"
+            android:text="Unicauca"
+            android:id="@+id/txt_director_programa_P"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            />
+        <ImageView
+            android:id="@+id/director"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:src="@drawable/autor"
+            android:layout_marginTop="5dp"/>
+
+
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:textSize="20sp"
+            android:text="00-24"
+            android:id="@+id/txt_hora_programa_P"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/hora"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:src="@drawable/clock"/>
+
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

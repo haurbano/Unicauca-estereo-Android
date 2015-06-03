@@ -1,0 +1,173 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pc.unicaucaestereo.fragments.Envivo"
+    android:background="@drawable/rojo_azul_700">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/logoUni"
+            android:layout_width="0dp"
+            android:layout_weight="17"
+            android:layout_height="110dp"
+            android:src="@drawable/logo104"
+            android:layout_marginLeft="15dp"
+            />
+
+        <View
+            android:id="@+id/lineaazul"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="75dp"
+            android:layout_marginLeft="5dp"
+            android:background="#ffcc0f15"
+            android:layout_marginTop="15dp"/>
+
+        <View
+            android:id="@+id/lineroja"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="75dp"
+            android:layout_marginLeft="2dp"
+            android:background="#ff2d1ecc"
+            android:layout_marginTop="15dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="35"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="14dp"
+                android:text="Unicauca"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="14dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Estéreo"
+                android:layout_marginTop="-10dp"
+                />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/btn_emisora_play"
+        android:src="@drawable/play"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/escucha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_emisora_play"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"/>
+
+
+
+
+    <ImageView
+        android:src="@drawable/pause1"
+        android:id="@+id/btn_emisora_pause"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@id/btn_emisora_play"
+        android:layout_below="@id/escucha"
+        android:layout_marginTop="50dp"/>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+
+
+        <ImageView
+            android:id="@+id/sound"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="90dp"
+            android:src="@drawable/sound"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/txt_estasEscuchando"
+                android:textSize="18sp"
+                android:text="Estás escuchando: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"/>
+            <TextView
+
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="Unicauca Estereo"
+                android:textColor="#ffffff"
+                android:id="@+id/txt_nombre_programa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+
+                android:textSize="17sp"
+                android:text="Director programa"
+                android:id="@+id/txt_director_programa"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="17sp"
+                android:text="00-24"
+                android:textColor="#ffffff"
+                android:id="@+id/txt_hora_programa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

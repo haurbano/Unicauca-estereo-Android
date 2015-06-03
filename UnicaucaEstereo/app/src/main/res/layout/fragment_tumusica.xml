@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pc.unicaucaestereo.fragments.Tumusica">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ly"
+        android:background="#22000000"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        >
+
+        <LinearLayout
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_nombre"
+                android:textSize="18sp"
+                android:text="Unicauca Estereo"
+                android:textColor="#ff9e2018"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:paddingLeft="7dp"
+                android:paddingTop="3dp"/>
+
+            <TextView
+                android:textSize="14sp"
+                android:id="@+id/txt_artista"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:paddingLeft="8dp"
+                android:text="Inicial"
+                android:textColor="#d2000000"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:src="@drawable/atras"
+            android:id="@+id/btn_atras_cancion"
+            android:text="atras"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent" />
+
+        <ImageView
+
+            android:id="@+id/btn_vivo_pause"
+            android:src="@drawable/playpause"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent" />
+        <ImageView
+            android:src="@drawable/sgt"
+            android:layout_weight="1"
+            android:id="@+id/btn_siguiente_cancion"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/buscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="3dp">
+
+        <EditText
+            android:id="@+id/txt_buscar_cancion"
+            android:hint="Buscar"
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:inputType="textFilter"
+            />
+        <ImageView
+            android:id="@+id/btn_buscar_cancion"
+            android:src="@drawable/search"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp" />
+
+        </LinearLayout>
+    <ListView
+        android:layout_below="@+id/buscar"
+        android:id="@+id/list_canciones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ly"
+        ></ListView>
+
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Unicauca Estereo</string>
+
+    <string-array name="list_drawer_resources">
+        <item>En vivo</item>
+        <item>Tu música</item>
+        <item>Programación</item>
+        <item>Tú emisora</item>
+    </string-array>
+
+    <string name="toggle_cerrado">toggle cerrado</string>
+    <string name="toggle_abierto">toggle abierto</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quesomos_text">Un medio de comunicación Institucional, adscrito a la Vicerrectoría de Cultura y Bienestar de la Universidad del Cauca, de carácter universitario, orientamos la programación a elevar el nivel educativo y cultural; de la misma manera, promover y difundir los valores humanos, la formación ciudadana y el debate público.</string>
+    <string name="nuestraprogramacion_text">Incluye espacios con contenidos de interés para adultos, jóvenes, familia, universitarios, población infantil y la comunidad en general; que sumado a los espacios musicales pertenecientes a diferentes géneros, permiten consolidar una programación universitaria, de interés público y enfocada a la diversidad de la región y el país.</string>
+    <string name="proposito_text">Articularnos a la región norte del departamento del Cauca, con una programación que refleje el sentido universitario, la diversidad musical de la región y del país, al tiempo que nos permita entretejer saberes y encuentros con las culturas diversas de los habitantes del norte del Cauca.</string>
+
+
+</resources>
