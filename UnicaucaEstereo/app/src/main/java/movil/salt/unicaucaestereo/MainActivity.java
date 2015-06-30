@@ -1,6 +1,7 @@
 package movil.salt.unicaucaestereo;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -23,6 +24,7 @@ import movil.salt.unicaucaestereo.fragments.Programacion;
 import movil.salt.unicaucaestereo.fragments.Tumusica;
 import movil.salt.unicaucaestereo.models.DBProgramacion;
 import movil.salt.unicaucaestereo.models.Programa;
+import movil.salt.unicaucaestereo.servicios.Reproducir;
 
 
 public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener, DrawerLayout.DrawerListener {
@@ -95,8 +97,12 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         super.onSaveInstanceState(outState);
     }
 
-
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Intent intent = new Intent(getApplicationContext(), Reproducir.class);
+        stopService(intent);
+    }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

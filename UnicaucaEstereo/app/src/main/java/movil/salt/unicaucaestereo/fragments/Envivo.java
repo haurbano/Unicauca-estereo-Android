@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import movil.salt.unicaucaestereo.MainActivity;
@@ -34,12 +35,12 @@ public class Envivo extends Fragment implements View.OnClickListener, MediaPlaye
     TextView txt_estado;
     String estado = "Detenido";
 
+    public static ProgressBar progress;
+
+
     TextView txt_nombre_programa,txt_director_programa,txt_hora_programa;
     Intent intent;
 
-    public Envivo() {
-        // Required empty public constructor
-    }
 
 
     @Override
@@ -56,6 +57,8 @@ public class Envivo extends Fragment implements View.OnClickListener, MediaPlaye
         txt_director_programa = (TextView) v.findViewById(R.id.txt_director_programa);
         txt_hora_programa = (TextView) v.findViewById(R.id.txt_hora_programa);
 
+        progress = (ProgressBar) v.findViewById(R.id.progres);
+
         getProgramaActual();
 
         play.setOnClickListener(this);
@@ -70,8 +73,12 @@ public class Envivo extends Fragment implements View.OnClickListener, MediaPlaye
     }
 
 
-
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle("En Vivo");
+        progress.setVisibility(View.INVISIBLE);
+    }
 
     @Override
     public void onClick(View view) {
@@ -86,6 +93,7 @@ public class Envivo extends Fragment implements View.OnClickListener, MediaPlaye
 
                     intent.putExtra("estado", ESTADO_PLAY);
                     try {
+                        progress.setVisibility(View.VISIBLE);
                         getActivity().startService(intent);
                         estado = "pause";
 
@@ -94,6 +102,7 @@ public class Envivo extends Fragment implements View.OnClickListener, MediaPlaye
                     }
                 }
                 else {
+                        progress.setVisibility(View.VISIBLE);
                         getActivity().startService(intent);
                 }
                 break;
@@ -103,6 +112,7 @@ public class Envivo extends Fragment implements View.OnClickListener, MediaPlaye
                 if (estado != "Detenido")
                 {
                     getActivity().stopService(intent);
+                    progress.setVisibility(View.INVISIBLE);
                 }
                 break;
         }
@@ -137,5 +147,10 @@ public class Envivo extends Fragment implements View.OnClickListener, MediaPlaye
     public void onPrepared(MediaPlayer mediaPlayer) {
         txt_estado.setText("En vivo");
         mediaPlayer.start();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 }

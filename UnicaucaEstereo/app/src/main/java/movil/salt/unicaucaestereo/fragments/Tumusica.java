@@ -75,6 +75,11 @@ public class Tumusica extends Fragment implements AdapterView.OnItemClickListene
         // Required empty public constructor
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle("Tu Música");
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

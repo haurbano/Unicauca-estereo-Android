@@ -7,16 +7,18 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.util.Enumeration;
+
+import movil.salt.unicaucaestereo.fragments.Envivo;
 
 /**
  * Created by pc on 28/05/2015.
  */
 public class Reproducir extends Service implements MediaPlayer.OnPreparedListener {
-
-
 
     MediaPlayer mediaPlayer = new MediaPlayer();
 
@@ -63,5 +65,6 @@ public class Reproducir extends Service implements MediaPlayer.OnPreparedListene
     @Override
     public void onPrepared(MediaPlayer mediaPlayer) {
         mediaPlayer.start();
+       Envivo.progress.setVisibility(View.INVISIBLE);
     }
 }

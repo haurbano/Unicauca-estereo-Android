@@ -112,9 +112,10 @@
         android:layout_marginLeft="10dp">
 
 
-        <ImageView
-            android:id="@+id/sound"
-            android:layout_width="0dp"
+        <ProgressBar
+            
+            android:id="@+id/progres"
+            android:layout_width="30dp"
             android:layout_weight="1"
             android:layout_height="90dp"
             android:src="@drawable/sound"

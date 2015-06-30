@@ -24,12 +24,13 @@ public class Programacion extends Fragment {
     List<TitleFragment> data;
     PagerAdapter adapter;
 
+
+
     public Programacion() {
         // Required empty public constructor
     }
 
-
-    @Override
+     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_programacion2, container, false);
@@ -52,6 +53,9 @@ public class Programacion extends Fragment {
         return v;
     }
 
-
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle("Programación");
+    }
 }
